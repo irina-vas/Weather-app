@@ -4,7 +4,27 @@ import classes from './WeatherCardByCity.module.css';
 
 
 export default function WeatherCardByCity({weatherByCity}) {
-  console.log(weatherByCity[0].weather.icon);
+  const dateFormater = (data) => {
+    const monthNum = {
+      '01': 'January',
+      '02': 'February',
+      '03': 'March',
+      '04': 'April',
+      '05': 'May',
+      '06': 'June',
+      '07': 'July',
+      '08': 'August',
+      '09': 'September',
+      '10': 'October',
+      '11': 'November',
+      '12': 'December'
+    } 
+    let day = data.slice(8,10);
+    let month = data.slice(5,7);
+    let year = data.slice(0,4);
+
+    return `${day} ${monthNum[month]}, ${year}`;
+  }
   const iconUrl = `https://www.weatherbit.io/static/img/icons/${weatherByCity[0].weather.icon}.png`;
   return (
     <div className={classes.wrapper}>
@@ -14,11 +34,14 @@ export default function WeatherCardByCity({weatherByCity}) {
             <div key={index} className={classes.city_name}>
               {item.city_name}, {item.country_code}
             </div>
+            <div className={classes.date_now}>
+              {dateFormater(item.datetime)}
+            </div>
             <div className={classes.weather_icon}>
               <img src={iconUrl} alt=""  />
             </div>
             <div className={classes.temperature}>
-              {item.temp > 0 ? `${'+' + Math.round(item.temp)}` : `${'-' + Math.round(item.temp)}`}
+              {Math.round(item.temp) + '°c'}
             </div>
             <div>
               {

@@ -28,5 +28,8 @@
   background-color: rgba(224, 224, 224, 0.35);
 }
 
+.search_bar:focus {
+  background-color: rgba(224, 224, 224, 0.75)
+}
 
 
