@@ -1,13 +1,44 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  font-family: Nunito;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+img {
+  width: 100%;
+  display: block;
 }
+
+
+
+.red {
+  background-image: url(./common/images/afternoon.png);
+  background-repeat: no-repeat;
+  background-size: 100vw;
+  background-color: #f7aa46;
+}
+
+.blue {
+  background-image: url(./common/images/night.jpg);
+  background-repeat: no-repeat;
+  background-size: 100vw;
+  background-color: #43356a;
+}
+
+
+@media only screen and (max-width: 1200px)  {
+  .red {
+    background-image: url(./common/images/afternoon-tabs.png);
+    background-repeat: no-repeat;
+    background-color: #fadea7
+  }
+
+  .blue {
+    background-image: url(./common/images/night-tabs.jpg);
+    background-repeat: no-repeat;
+    background-size: 100vw;
+    background-color: #010006;
+  }
+  
+}
+

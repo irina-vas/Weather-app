@@ -1,0 +1,32 @@
+.wrapper {
+  margin: 2vw auto;
+  display: flex;
+  justify-content: center;
+  padding: 2vw;
+}
+
+.search_loop {
+  position: absolute;
+  width: 3vw;
+  top: 7vw;
+  right: 5.5vw;
+  opacity: 0.5;
+}
+
+.search_bar {
+  margin: 2vw;
+  width: 90vw;
+  height: 4vw;
+  padding: 0.5vw;
+  border: none;
+  outline: none;
+  appearance: none;
+  border-radius: 10px;
+  opacity: 0.5;
+  font-size: 20px;
+  background: none;
+  background-color: rgba(224, 224, 224, 0.35);
+}
+
+
+
